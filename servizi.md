@@ -48,15 +48,29 @@ erDiagram
       date Data_pagamento
       float Importo_pagato
       int ID_fattura FK
-      string Modalita "Contanti, PayPal, Bancomat"
-      string Stato_pagamento "Saldato, Non saldato"
+      int ID_modalita FK
+      int ID_SALDO  "Saldato, Non saldato" FK
     }
     
+    MODALITA_PAGAMENTO {
+    int ID_modalita PK
+    string tipo_pagamento "Contanti, PayPal, Bancomat"
+    }
+
+    SALDO {
+    int id_saldo PK
+    string descrizione "Saldato, Non saldato"
+    }
+
+
+  
     CLIENTE ||--o{ CONSULENZA : "richiede"
     CONSULENZA ||--o{ CONTRATTO : "genera"
     CONTRATTO ||--o{ SERVIZIO : "comprende"
     STATO ||--o{ CONSULENZA : "definisce stato"
-    
+    MODALITA_PAGAMENTO ||--o{ PAGAMENTO : "effettuato"
+    SALDO ||--o{ PAGAMENTO : "è riferito"
+
     %% FATTURA può derivare o da una CONSULENZA oppure da un SERVIZIO  
     CONSULENZA ||--o{ FATTURA : "può dar luogo a"
     SERVIZIO ||--o{ FATTURA : "può dar luogo a"
