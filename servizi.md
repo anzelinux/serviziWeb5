@@ -12,12 +12,12 @@ erDiagram
       int ID_consulenza PK
       date Data_creazione
       string Note
-      int ID_consulenza FK
+      int ID_stato_consulenza FK
       int ID_cliente FK
     }
 
     STATO {
-      int ID_CONSULENZA PK 
+      int ID_stato_consulenza PK 
       string stato "In corso, Scaduta, Sostituita"
     }
 
