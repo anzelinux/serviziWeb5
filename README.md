@@ -1,7 +1,26 @@
-# serviziWeb5
+    , # serviziWeb5
 Progetto in preparazione all esame di stato
 
-### Consegna Iniziale
+### Consegna Per la seconda prova del corso SIA (Sistemi Informativi Aziendali), una traccia verosimile potrebbe riguardare un caso aziendale che richieda l'analisi, la progettazione e l'implementazione di soluzioni informatiche per la gestione dei dati e dei processi aziendali.
+
+Ecco un esempio di traccia:
+
+**Titolo:** Ottimizzazione dei Processi Aziendali attraverso un Sistema Gestionale
+
+**Scenario:** L'azienda "TechSolution S.r.l.", operante nel settore della consulenza informatica, ha riscontrato difficoltà nella gestione delle commesse dei clienti. Attualmente utilizza fogli di calcolo per monitorare le richieste, la fatturazione e il planning dei tecnici, ma questa metodologia porta a errori e rallentamenti nella gestione operativa.
+
+**Obiettivi della prova:**
+1. **Analisi del problema** – Identificare le criticità dell'attuale sistema di gestione.
+2. **Progettazione della soluzione** – Ideare un database relazionale con le principali tabelle necessarie per la gestione delle commesse e dei clienti.
+3. **Sviluppo** – Creare un’applicazione che permetta la registrazione delle commesse, il monitoraggio dello stato di avanzamento e la generazione di report per l’analisi dei costi e ricavi.
+4. **Verifica e miglioramenti** – Testare il sistema proposto e suggerire eventuali miglioramenti.
+
+**Consegna richiesta:** 
+- Relazione con analisi, diagrammi UML e struttura del database.
+- Script SQL per la creazione delle tabelle.
+- Breve documento sull'uso dell’applicazione.
+
+Questa traccia permette agli studenti di applicare le competenze di informatica e gestione aziendale in un contesto pratico e stimolante. Vuoi che aggiunga degli approfondimenti su qualche aspetto specifico?
 
 #### Obiettivo
      Progettare un modello Entità‑Relazioni (ER) e uno schema logico per un sistema di gestione delle attività di consulenza, che includa la registrazione di clienti, consulenze, contratti e servizi, nonché la gestione di fatturazione e pagamenti. L’obiettivo è quello di garantire che il modello sia:
