@@ -12,10 +12,15 @@ erDiagram
       int ID_consulenza PK
       date Data_creazione
       string Note
-      string Stato_consulenza "In corso, Scaduta, Sostituita"
+      int ID_consulenza FK
       int ID_cliente FK
     }
-    
+
+    STATO {
+      int ID_CONSULENZA PK 
+      string stato "In corso, Scaduta, Sostituita"
+    }
+
     CONTRATTO {
       int ID_contratto PK
       date Data_inizio
@@ -50,6 +55,7 @@ erDiagram
     CLIENTE ||--o{ CONSULENZA : "richiede"
     CONSULENZA ||--o{ CONTRATTO : "genera"
     CONTRATTO ||--o{ SERVIZIO : "comprende"
+    CONSULENZA ||--o{ STATO : "presenta status"
     
     %% FATTURA può derivare o da una CONSULENZA oppure da un SERVIZIO  
     CONSULENZA ||--o{ FATTURA : "può dar luogo a"
