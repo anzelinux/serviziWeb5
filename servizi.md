@@ -49,7 +49,7 @@ erDiagram
       float Importo_pagato
       int ID_fattura FK
       int ID_modalita FK
-      int ID_SALDO  "Saldato, Non saldato" FK
+      int ID_SALDO FK
     }
     
     MODALITA_PAGAMENTO {
