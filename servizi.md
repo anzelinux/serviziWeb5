@@ -1,3 +1,5 @@
+```mermaid
+
 erDiagram
     CLIENTE {
       int ID_cliente PK
