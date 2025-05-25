@@ -55,7 +55,7 @@ erDiagram
     CLIENTE ||--o{ CONSULENZA : "richiede"
     CONSULENZA ||--o{ CONTRATTO : "genera"
     CONTRATTO ||--o{ SERVIZIO : "comprende"
-    CONSULENZA ||--o{ STATO : "presenta status"
+    STATO ||--o{ CONSULENZA : "definisce stato"
     
     %% FATTURA può derivare o da una CONSULENZA oppure da un SERVIZIO  
     CONSULENZA ||--o{ FATTURA : "può dar luogo a"
