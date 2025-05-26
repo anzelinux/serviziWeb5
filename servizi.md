@@ -27,7 +27,6 @@ erDiagram
       date Data_fine
       int ID_servizio FK
       int ID_consulenza FK
-      int ID_fattura FK
     }
     
     SERVIZIO {
