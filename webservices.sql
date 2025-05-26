@@ -26,6 +26,13 @@ create table consulenza (
 	foreign key(id_cliente) references cliente(id_cliente)
 );
 
+create table servizio (
+	id_servizio smallint not null AUTO_INCREMENT,
+	nome varchar(50) not null,
+	primary key (id_servizio)	
+
+);
+
 create table contratto (
 	id_contratto smallint not null AUTO_INCREMENT,
 	data_inizio date not null,
@@ -34,9 +41,11 @@ create table contratto (
 	check (data_fine >= data_inizio),
 	id_servizio smallint,
 	id_consulenza int not null,
+	id_fattura int not null,
 
 	primary key (id_contratto),
 	foreign key (id_consulenza) references consulenza(id_consulenza),
-	foreign key (id_servizio) references servizio (id_servizio)
+	foreign key (id_servizio) references servizio (id_servizio),
+	foreign key (id_fattura) references fattura (id_fattura)
 
 );
