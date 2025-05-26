@@ -46,3 +46,16 @@ create table contratto (
 	foreign key (id_servizio) references servizio (id_servizio)
 
 );
+
+CREATE TABLE fattura (
+    id_fattura smallint NOT NULL AUTO_INCREMENT,
+    importo DECIMAL(5,2) NOT NULL,
+    data_emissione DATE NOT NULL,
+    CHECK (data_emissione >= '2025-01-01'),
+    id_consulenza int NULL,
+    id_contratto smallint NULL,
+    PRIMARY KEY (id_fattura),
+    FOREIGN KEY (id_consulenza) REFERENCES consulenza(id_consulenza),
+    FOREIGN KEY (id_contratto) REFERENCES contratto(id_contratto)
+);
+ 
