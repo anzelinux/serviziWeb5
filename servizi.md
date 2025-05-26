@@ -71,8 +71,11 @@ erDiagram
     MODALITA_PAGAMENTO ||--o{ PAGAMENTO : "effettuato"
     SALDO ||--o{ PAGAMENTO : "è riferito"
 
-    %% FATTURA può derivare o da una CONSULENZA oppure da un SERVIZIO  
+    %% FATTURA discende da  una CONSULENZA oppure da un CONTRATTO
+    
+    %% UN CONTRATTO o una CONSULENZA  producono una o più FATTURE
     CONSULENZA ||--o{ FATTURA : "può dar luogo a"
-    SERVIZIO ||--o{ FATTURA : "può dar luogo a"
+    CONTRATTO ||--o{ FATTURA : "può dar luogo a"
+    
     
     FATTURA ||--o{ PAGAMENTO : "regola"
