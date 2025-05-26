@@ -1,4 +1,4 @@
---create database webservices;
+create database webservices;
 
 use webservices;
 create table cliente (
