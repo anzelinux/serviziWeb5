@@ -32,20 +32,3 @@ create table servizio (
 	primary key (id_servizio)	
 
 );
-
-create table contratto (
-	id_contratto smallint not null AUTO_INCREMENT,
-	data_inizio date not null,
-	check (data_inizio>= '2025-01-01'),
-	data_fine date null,
-	check (data_fine >= data_inizio),
-	id_servizio smallint,
-	id_consulenza int not null,
-	id_fattura int not null,
-
-	primary key (id_contratto),
-	foreign key (id_consulenza) references consulenza(id_consulenza),
-	foreign key (id_servizio) references servizio (id_servizio),
-	foreign key (id_fattura) references fattura (id_fattura)
-
-);
