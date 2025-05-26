@@ -58,4 +58,16 @@ CREATE TABLE fattura (
     FOREIGN KEY (id_consulenza) REFERENCES consulenza(id_consulenza),
     FOREIGN KEY (id_contratto) REFERENCES contratto(id_contratto)
 );
- 
+
+create table saldo (	
+	id_saldo smallint not null,
+	descrizione varchar(9) not null,
+	primary key (id_saldo)
+	);
+
+create table modalita_pagamento (
+	id_modalita smallint not null,
+	tipo_pagamento varchar(9) not null,
+	primary key (id_modalita)
+	);
+
