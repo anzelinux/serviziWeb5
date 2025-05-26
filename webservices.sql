@@ -38,7 +38,6 @@ create table contratto (
 	data_inizio date not null,
 	check (data_inizio>= '2025-01-01'),
 	data_fine date null,
-	chech (data_fine >= data_inizio),
 	id_servizio smallint,
 	id_consulenza int not null,
 
