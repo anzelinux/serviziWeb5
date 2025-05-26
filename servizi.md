@@ -25,14 +25,14 @@ erDiagram
       int ID_contratto PK
       date Data_inizio
       date Data_fine
-      string Tipo_servizio
+      int ID_servizio FK
       int ID_consulenza FK
+      int ID_fattura FK
     }
     
     SERVIZIO {
       int ID_servizio PK
       string Nome
-      int ID_contratto FK
     }
     
     FATTURA {
@@ -66,8 +66,8 @@ erDiagram
   
     CLIENTE ||--o{ CONSULENZA : "richiede"
     CONSULENZA ||--o{ CONTRATTO : "genera"
-    CONTRATTO ||--o{ SERVIZIO : "comprende"
-    STATO ||--o{ CONSULENZA : "definisce stato"
+    SERVIZIO ||--o{ CONTRATTO : "riferito"
+    STATO ||--o{ CONSULENZA : "definisce"
     MODALITA_PAGAMENTO ||--o{ PAGAMENTO : "effettuato"
     SALDO ||--o{ PAGAMENTO : "è riferito"
 
