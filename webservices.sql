@@ -121,22 +121,34 @@ INSERT INTO saldo (id_saldo, descrizione) VALUES
 (1, 'Pagato'),
 (2, 'In sospeso');
 
+INSERT INTO servizio (id_servizio, nome) VALUES 
+(1, 'Sicurezza informatica'),
+(2, 'Analisi dati'),
+(3, 'Ottimizzazione SEO'),
+(4, 'Gestione social media'),
+(5, 'Consulenza finanziaria'),
+(6, 'Sviluppo software'),
+(7, 'Strategia marketing'),
+(8, 'Gestione IT'),
+(9, 'Supporto legale'),
+(10, 'Formazione aziendale');
+
 INSERT INTO modalita_pagamento (id_modalita, tipo_pagamento) VALUES 
 (1, 'Contanti'),
 (2, 'PayPal'),
 (3, 'Bonifico');
 
 INSERT INTO contratto (data_inizio, data_fine, id_servizio, id_consulenza) VALUES 
-('2025-03-15', '2026-03-15', 1, 1),
-('2025-04-20', '2026-04-20', 2, 2),
-('2025-05-10', '2026-05-10', 3, 3),
-('2025-06-25', '2026-06-25', 4, 4),
-('2025-07-30', '2026-07-30', 5, 5),
-('2025-08-15', '2026-08-15', 6, 6),
-('2025-09-10', '2026-09-10', 7, 7),
-('2025-10-05', '2026-10-05', 8, 8),
-('2025-11-20', '2026-11-20', 9, 9),
-('2025-12-12', '2026-12-12', 10, 10);
+('2025-03-15', '2026-03-15', 1, 11),
+('2025-04-20', '2026-04-20', 2, 12),
+('2025-05-10', '2026-05-10', 3, 13),
+('2025-06-25', '2026-06-25', 4, 14),
+('2025-07-30', '2026-07-30', 5, 15),
+('2025-08-15', '2026-08-15', 6, 16),
+('2025-09-10', '2026-09-10', 7, 17),
+('2025-10-05', '2026-10-05', 8, 18),
+('2025-11-20', '2026-11-20', 9, 19),
+('2025-12-12', '2026-12-12', 10, 20);
 
 INSERT INTO contratto (data_inizio, data_fine, id_servizio, id_consulenza) VALUES 
 ('2025-03-15', '2026-03-15', 1, 1),
