@@ -40,7 +40,7 @@ erDiagram
       float Importo
       date Data_emissione
       int ID_consulenza FK "opzionale"
-      int ID_servizio FK "opzionale"
+      int ID_fattura FK "opzionale"
     }
     
     PAGAMENTO {
