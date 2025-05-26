@@ -71,3 +71,16 @@ create table modalita_pagamento (
 	primary key (id_modalita)
 	);
 
+create table pagamento (
+	id_pagamento smallint not null AUTO_INCREMENT,
+	data_pagamento date not null,
+	check (data_pagamento >= '2005-01-01'),
+	importo_pagato decimal(6,2) not null,
+	id_fattura smallint not null,
+	id_modalita smallint not null,
+	id_saldo smallint not null,
+	primary key (id_pagamento),
+	foreign key (id_fattura) references fattura(id_fattura),	
+	foreign key (id_modalita) references modalita_pagamento(id_modalita),	
+	foreign key (id_saldo) references saldo(id_saldo)
+);
