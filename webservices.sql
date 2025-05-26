@@ -33,7 +33,7 @@ create table servizio (
 
 );
 
-create tabel contratto (
+create table contratto (
 	id_contratto smallint not null AUTO_INCREMENT,
 	data_inizio date not null,
 	check (data_inizio>= '2025-01-01'),
